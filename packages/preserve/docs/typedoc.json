@@ -1,6 +1,5 @@
 {
   "name": "@truffle/preserve",
-  "theme": "../../node_modules/@trufflesuite/typedoc-default-themes/bin/default/",
   "excludeExternals": true,
   "exclude": [
     "**/test/*"
