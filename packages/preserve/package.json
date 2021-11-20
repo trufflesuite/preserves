@@ -37,6 +37,7 @@
     "typescript": "^4.1.4"
   },
   "dependencies": {
+    "@truffle/error": "^0.0.14",
     "spinnies": "^0.5.1"
   }
 }
