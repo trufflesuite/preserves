@@ -9,14 +9,16 @@ Move the preserve* packages from trufflesuite.
           however these commits might bump the underlying @truffle/preserve* package in this monorepo whch need
           to remain.
 - [ ] Build CHANGELOG.md
-- [ ] Set up husky
-  - [ ] may need to run against history
+- [x] Set up husky
+  - [x] eslint
+  - [x] eslint
+  - [x] lint-staged
 - [ ] Establish github branch protection
   - [ ] Set master and develop workflow
 - [ ] Determine publishing method
   - [ ] Update publishing details 
     - [ ] admin info on npmjs
-    - [ ] package.json urls need to point this repo
+    - [x] package.json urls need to point this repo
   - [ ] GH CI based publish would be nice to have. 
     - [ ] may need conventional commits
     - [ ] should this monorepo respect independent versioning? which is
