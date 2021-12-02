@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "env": {
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "Console": "readonly"
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended"
+  ],
+  "ignorePatterns": ["**/dist/*"],
+
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^debug$|^_" }
+    ],
+    "x@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/no-this-alias": 0,
+    "@typescript-eslint/no-unnecessary-type-constraint": 0,
+    "@typescript-eslint/no-var-requires": "warn",
+    "quote-props": [ "error", "consistent" ],
+    "@typescript-eslint/semi": [ "error", "always" ],
+    "no-constant-condition": "warn",
+    "no-empty-pattern": "warn",
+    "no-mixed-operators": "warn",
+    "no-tabs": "warn",
+    "no-undef": ["error", { "typeof": true }],
+    "no-useless-escape": "warn",
+    "prefer-const": "warn" ,
+    "require-yield": "warn"
+  }
+}
