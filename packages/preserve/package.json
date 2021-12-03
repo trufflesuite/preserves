@@ -34,8 +34,10 @@
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "eslint": "^8.3.0",
+    "husky": "^7.0.4",
     "iter-tools": "^7.0.2",
     "jest": "^26.0.1",
+    "prettier": "^2.5.0",
     "ts-jest": "^26.1.0",
     "typedoc": "^0.20.34",
     "typescript": "4.1.4"

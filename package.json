@@ -2,14 +2,20 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "lint-staged": "^12.1.2"
   },
   "scripts": {
     "bootstrap": "npx lerna bootstrap",
-    "prepare": "lerna run prepare --stream --concurrency=1",
+    "prepare": "husky install && lerna run prepare --stream --concurrency=1",
     "test": "lerna run test --stream --concurrency=1 -- --colors",
     "docs": "lerna run docs --scope @truffle/preserve",
-    "lint": "lerna run lint --stream --concurrency=1"
+    "lint": "lerna run lint --stream --concurrency=1",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "packages/**/*.ts": ["eslint --fix", "prettier --write"],
+    "packages/**/*.js": ["eslint --fix", "prettier --write"]
   },
   "workspaces": {
     "packages": [
@@ -17,4 +23,3 @@
     ]
   }
 }
-
