@@ -30,7 +30,7 @@ export abstract class BaseController implements IBaseController {
   emit<E extends Event>(event: Omit<E, "scope">): E {
     return {
       ...Object.entries(event)
-        .filter(([_, value]) => value !== undefined)
+        .filter(([_, value]) => value !== undefined) // eslint-disable-line
         .map(([key, value]) => ({ [key]: value }))
         .reduce((a, b) => ({ ...a, ...b })),
 
