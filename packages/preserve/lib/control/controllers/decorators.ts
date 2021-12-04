@@ -1,7 +1,7 @@
 import type { State } from "../types";
 
 export const validStates = (states: State[]) => (
-  target: Object,
+  target: Object,  // eslint-disable-line
   propertyKey: string,
   descriptor: PropertyDescriptor
 ) => {
@@ -17,7 +17,7 @@ export const validStates = (states: State[]) => (
 };
 
 export const transitionToState = (state: State) => (
-  target: Object,
+  target: Object,  // eslint-disable-line
   propertyKey: string,
   descriptor: PropertyDescriptor
 ) => {
