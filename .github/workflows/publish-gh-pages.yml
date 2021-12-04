@@ -1,0 +1,35 @@
+name: Publish gh-pages
+
+on:
+  push:
+    branches:
+      - xmaster
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install node
+        uses: actions/setup-node@v2
+        with: 
+        node-version: '14'
+
+      - name: Build and generate docs
+        run: |
+          npm install -g yarn
+          yarn bootstrap
+          yarn docs
+
+      - name: Deploy to GitHub Pages
+        uses: Cecilapp/GitHub-Pages-deploy@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          email: cds.sudama@gmail.com
+          build_dir: _site
+          branch: website
+          # cname: domain.tld
+          jekyll: no
+          commit_message: "docs: auto build documentation"
