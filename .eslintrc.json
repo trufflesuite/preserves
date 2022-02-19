@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["dist"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^debug$|^_" }
+    ],
+    "quote-props": [ "error", "consistent" ],
+    "@typescript-eslint/semi": [ "error", "always" ],
+    "no-mixed-operators": "warn",
+    "no-tabs": "warn",
+    "no-useless-escape": "warn",
+    "no-undef": ["error", { "typeof": true }]
+  }
+}
