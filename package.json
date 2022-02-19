@@ -2,6 +2,20 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "lerna-update-wizard": "^1.1.0",
+    "prs-merged-since": "^1.1.0"
+  },
+  "scripts": {
+    "bootstrap": "npx lerna bootstrap",
+    "prepare": "lerna run prepare --stream --concurrency=1",
+    "test": "lerna run test --stream --concurrency=1 -- --colors",
+    "docs": "lerna run docs --scope @truffle/preserve",
+    "update": "lernaupdate"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   }
 }
