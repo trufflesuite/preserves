@@ -6,6 +6,11 @@
     "lerna-update-wizard": "^1.1.0",
     "prs-merged-since": "^1.1.0"
   },
+  "resolutions": {
+    "typescript": "4.2.4",
+    "@ganache/filecoin": "0.1.2",
+    "ganache": "3.0.0-filecoin.3"
+  },
   "scripts": {
     "bootstrap": "npx lerna bootstrap",
     "prepare": "lerna run prepare --stream --concurrency=1",
