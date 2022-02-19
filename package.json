@@ -23,7 +23,9 @@
     "test": "lerna run test --stream --concurrency=1 -- --colors",
     "test:trace": "NODE_TRACE_WARNINGS=1 lerna run test --stream --concurrency=1 -- --colors",
     "docs": "lerna run docs --scope @truffle/preserve",
-    "update": "lernaupdate"
+    "update": "lernaupdate",
+    "prepare-release": "./scripts/prepare-release.sh",
+    "publish-release": "./scripts/publish-release.sh"
   },
   "workspaces": {
     "packages": [
