@@ -36,3 +36,18 @@ jobs:
     - run: npm install -g yarn
     - run: yarn bootstrap
     - run: yarn test
+
+  slack_notification:
+    needs: [yarncheck, build]
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: 8398a7/action-slack@v3
+        continue-on-error: true
+        with:
+          channel: '#truffle-ci-notifications'
+          status: ${{ job.status }}
+          fields: commit,author,pullRequest
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: github.event_name == 'pull_request' && !github.event.pull_request.head.repo.fork
