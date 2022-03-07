@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import CID from "cids";
 import type * as Preserve from "@truffle/preserve";
-import type { LotusClient } from "filecoin.js";
+import type { LotusClient } from "@trufflesuite/filecoin.js";
 
 export interface StorageDealOptions {
   walletAddress?: string;
@@ -29,25 +29,25 @@ export async function* proposeStorageDeal(
   const { step } = controls;
 
   const task = yield* step({
-    message: "Proposing storage deal..."
+    message: "Proposing storage deal...",
   });
 
   const dealCidResolution = yield* task.declare({
-    identifier: "Deal CID"
+    identifier: "Deal CID",
   });
 
-  const wallet = walletAddress || await client.wallet.getDefaultAddress();
+  const wallet = walletAddress || (await client.wallet.getDefaultAddress());
 
   // TODO: Allow making a deal with multiple miners
   const storageProposal = {
     Data: {
       TransferType: "graphsync",
-      Root: { "/": cid.toString() }
+      Root: { "/": cid.toString() },
     },
     Wallet: wallet,
     Miner: miners[0],
     EpochPrice: epochPrice,
-    MinBlocksDuration: duration
+    MinBlocksDuration: duration,
   };
 
   try {
@@ -57,7 +57,7 @@ export async function* proposeStorageDeal(
 
     yield* dealCidResolution.resolve({
       resolution: dealCid,
-      payload: chalk.bold(dealCid.toString())
+      payload: chalk.bold(dealCid.toString()),
     });
 
     yield* task.succeed();

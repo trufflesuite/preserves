@@ -1,8 +1,8 @@
 import {
   LotusClient,
   WsJsonRpcConnector,
-  HttpJsonRpcConnector
-} from "filecoin.js";
+  HttpJsonRpcConnector,
+} from "@trufflesuite/filecoin.js";
 import type * as Preserve from "@truffle/preserve";
 
 export interface ConnectOptions {
@@ -18,7 +18,7 @@ export async function* connect(
   const { step } = controls;
 
   const task = yield* step({
-    message: `Connecting to Filecoin node at ${url}...`
+    message: `Connecting to Filecoin node at ${url}...`,
   });
 
   const client = createLotusClient({ url, token });
@@ -29,7 +29,7 @@ export async function* connect(
     const id = await client.common.id();
     yield* task.succeed({
       result: id,
-      message: `Connected to Filecoin node at ${url}`
+      message: `Connected to Filecoin node at ${url}`,
     });
   } catch (error) {
     yield* task.fail({ error });
