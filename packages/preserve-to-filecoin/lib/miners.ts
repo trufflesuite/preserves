@@ -1,5 +1,5 @@
 import type * as Preserve from "@truffle/preserve";
-import type { LotusClient } from "filecoin.js";
+import type { LotusClient } from "@trufflesuite/filecoin.js";
 
 export interface GetMinersOptions {
   client: LotusClient;
@@ -13,7 +13,7 @@ export async function* getMiners(
   const { step } = controls;
 
   const task = yield* step({
-    message: "Retrieving miners..."
+    message: "Retrieving miners...",
   });
 
   try {

@@ -1,9 +1,9 @@
 import type CID from "cids";
 import type * as Preserve from "@truffle/preserve";
 import { terminalStates, DealState } from "./dealstates";
-import type { LotusClient } from "filecoin.js";
+import type { LotusClient } from "@trufflesuite/filecoin.js";
 import delay from "delay";
-import type { DealInfo } from "filecoin.js/builds/dist/providers/Types";
+import type { DealInfo } from "@trufflesuite/filecoin.js/builds/dist/providers/Types";
 
 export interface WaitOptions {
   client: LotusClient;
@@ -16,7 +16,7 @@ export async function* wait(options: WaitOptions): Preserve.Process<void> {
   const { step } = controls;
 
   const task = yield* step({
-    message: "Waiting for deal to finish..."
+    message: "Waiting for deal to finish...",
   });
 
   const state = yield* task.declare({ identifier: "Deal State" });
@@ -34,7 +34,7 @@ export async function getDealInfo(
   client: LotusClient
 ): Promise<DealInfo> {
   const dealCidParameter = {
-    "/": dealCid.toString()
+    "/": dealCid.toString(),
   };
 
   const dealInfo = await client.client.getDealInfo(dealCidParameter);
@@ -42,13 +42,16 @@ export async function getDealInfo(
   return dealInfo;
 }
 
-export async function getDealState(dealInfo: DealInfo, client: LotusClient): Promise<DealState> {
+export async function getDealState(
+  dealInfo: DealInfo,
+  client: LotusClient
+): Promise<DealState> {
   const dealState = await client.client.getDealStatus(dealInfo.State);
 
   return dealState as DealState;
 }
 
-async function * waitForDealToFinish(
+async function* waitForDealToFinish(
   dealCid: CID,
   client: LotusClient,
   task: Preserve.Control.ValueResolutionController
@@ -67,7 +70,7 @@ async function * waitForDealToFinish(
     if (state === "StorageDealActive") {
       yield* task.resolve({
         resolution: state,
-        payload: state
+        payload: state,
       });
       return;
     }
@@ -75,7 +78,7 @@ async function * waitForDealToFinish(
     if (terminalStates.includes(state)) {
       yield* task.resolve({
         resolution: state,
-        payload: state
+        payload: state,
       });
       throw new Error(`Deal failed: ${dealInfo.Message}`);
     }
