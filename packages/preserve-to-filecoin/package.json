@@ -1,6 +1,6 @@
 {
   "name": "@truffle/preserve-to-filecoin",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Truffle `preserve` command support for Filecoin",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
@@ -28,17 +28,10 @@
     "access": "public"
   },
   "devDependencies": {
-    "@ganache/filecoin": "0.1.2",
-    "@truffle/preserve-to-ipfs": "^0.2.7",
-    "@types/jest": "^26.0.20",
-    "@types/node": "^14.14.25",
-    "ganache": "3.0.0-filecoin.3",
-    "jest": "^26.6.3",
-    "ts-jest": "^26.5.0",
-    "typescript": "4.2.4"
+    "@truffle/preserve-to-ipfs": "file:../preserve-to-ipfs"
   },
   "dependencies": {
-    "@truffle/preserve": "^0.2.6",
+    "@truffle/preserve": "file:../preserve",
     "@trufflesuite/filecoin.js": "^0.0.2",
     "cids": "^1.1.5",
     "delay": "^5.0.0"

@@ -2188,6 +2188,42 @@
   resolved "https://registry.yarnpkg.com/@truffle/error/-/error-0.1.0.tgz#5e9fed79e6cda624c926d314b280a576f8b22a36"
   integrity sha512-RbUfp5VreNhsa2Q4YbBjz18rOQI909pG32bghl1hulO7IpvcqTS+C3Ge5cNbiWQ1WGzy1wIeKLW0tmQtHFB7qg==
 
+"@truffle/preserve-fs@file:packages/preserve-fs":
+  version "0.2.7"
+  dependencies:
+    "@truffle/preserve" "file:../../Library/Caches/Yarn/v6/npm-@truffle-preserve-fs-0.2.7-4f8366e9-cb78-4e0e-9ac4-2f0201449dee-1646800139542/node_modules/@truffle/preserve"
+
+"@truffle/preserve-to-buckets@file:packages/preserve-to-buckets":
+  version "0.2.8"
+  dependencies:
+    "@textile/hub" "^6.0.2"
+    "@truffle/preserve" "file:../../Library/Caches/Yarn/v6/npm-@truffle-preserve-to-buckets-0.2.8-d83a9f82-1d9f-4fce-bc32-3a48f5e5404a-1646800139544/node_modules/@truffle/preserve"
+    cids "^1.1.5"
+    ipfs-http-client "^48.2.2"
+    isomorphic-ws "^4.0.1"
+    iter-tools "^7.0.2"
+    ws "^7.2.0"
+
+"@truffle/preserve-to-filecoin@file:packages/preserve-to-filecoin":
+  version "0.2.8"
+  dependencies:
+    "@truffle/preserve" "file:../../Library/Caches/Yarn/v6/npm-@truffle-preserve-to-filecoin-0.2.8-c47564de-5e8a-4d99-a974-f441641f23bb-1646800139629/node_modules/@truffle/preserve"
+    "@trufflesuite/filecoin.js" "^0.0.2"
+    cids "^1.1.5"
+    delay "^5.0.0"
+
+"@truffle/preserve-to-ipfs@file:packages/preserve-to-ipfs":
+  version "0.2.8"
+  dependencies:
+    "@truffle/preserve" "file:../../Library/Caches/Yarn/v6/npm-@truffle-preserve-to-ipfs-0.2.8-1d63dd09-f755-49de-995f-278bc3dd56a8-1646800139816/node_modules/@truffle/preserve"
+    ipfs-http-client "^48.2.2"
+    iter-tools "^7.0.2"
+
+"@truffle/preserve@file:packages/preserve":
+  version "0.2.7"
+  dependencies:
+    spinnies "^0.5.1"
+
 "@trufflesuite/filecoin.js@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@trufflesuite/filecoin.js/-/filecoin.js-0.0.2.tgz#a74c8b8d2475707ce5c4293f0cf549fcfa761297"
@@ -2313,7 +2349,7 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^26.0.0", "@types/jest@^26.0.20":
+"@types/jest@^26.0.0":
   version "26.0.24"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
   integrity sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==
@@ -2361,7 +2397,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.6.tgz#df929d1bb2eee5afdda598a41930fe50b43eaa6a"
   integrity sha512-Exw4yUWMBXM3X+8oqzJNRqZSwUAaS4+7NdvHqQuFi/d+synz++xmX3QIf+BFqneW8N31R8Ky+sikfZUXq07ggQ==
 
-"@types/node@^14.0.13", "@types/node@^14.14.22", "@types/node@^14.14.25":
+"@types/node@^14.0.13":
   version "14.18.12"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.12.tgz#0d4557fd3b94497d793efd4e7d92df2f83b4ef24"
   integrity sha512-q4jlIR71hUpWTnGhXWcakgkZeHa3CCjcQcnuzU8M891BAWA2jHiziiWEPEkdS5pFsz7H9HJiy8BrK7tBRNrY7A==
@@ -8314,7 +8350,7 @@ jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jest@^26.0.1, jest@^26.6.3:
+jest@^26.0.1:
   version "26.6.3"
   resolved "https://registry.yarnpkg.com/jest/-/jest-26.6.3.tgz#40e8fdbe48f00dfa1f0ce8121ca74b88ac9148ef"
   integrity sha512-lGS5PXGAzR4RF7V5+XObhqz2KZIDUA1yD0DG6pBVmy10eh0ZIXQImRuzocsI/N2XZ1GrLFwTS27In2i2jlpq1Q==
@@ -13101,7 +13137,7 @@ truncate-utf8-bytes@^1.0.0:
   dependencies:
     utf8-byte-length "^1.0.1"
 
-ts-jest@^26.1.0, ts-jest@^26.5.0:
+ts-jest@^26.1.0:
   version "26.5.6"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.6.tgz#c32e0746425274e1dfe333f43cd3c800e014ec35"
   integrity sha512-rua+rCP8DxpA8b4DQD/6X2HQS8Zy/xzViVYfEs2OQu68tkCuKLV0Md8pmX55+W24uRIyAsf/BajRfxOs+R2MKA==

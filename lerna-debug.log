@@ -1,0 +1,52 @@
+0 silly argv { _: [ 'version' ], lernaVersion: '4.0.0', '$0': 'lerna' }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/fainashalts/preserves/preserves
+3 info versioning independent
+4 silly isAnythingCommitted
+5 verbose isAnythingCommitted 1
+6 silly getCurrentBranch
+7 verbose currentBranch develop
+8 silly remoteBranchExists
+9 silly isBehindUpstream
+10 silly isBehindUpstream develop is behind origin/develop by 0 commit(s) and ahead by 0
+11 silly hasTags
+12 verbose hasTags false
+13 info Assuming all packages changed
+14 verbose updated @truffle/preserve-fs
+15 verbose updated @truffle/preserve-to-buckets
+16 verbose updated @truffle/preserve-to-filecoin
+17 verbose updated @truffle/preserve-to-ipfs
+18 verbose updated @truffle/preserve
+19 verbose git-describe undefined => "2ea1de2"
+20 silly git-describe parsed => {"refCount":"170","sha":"2ea1de2","isDirty":false}
+21 info execute Skipping releases
+22 silly lifecycle No script for "preversion" in "root", continuing
+23 silly lifecycle No script for "preversion" in "@truffle/preserve", continuing
+24 silly lifecycle No script for "version" in "@truffle/preserve", continuing
+25 silly lifecycle No script for "preversion" in "@truffle/preserve-fs", continuing
+26 silly lifecycle No script for "preversion" in "@truffle/preserve-to-buckets", continuing
+27 silly lifecycle No script for "preversion" in "@truffle/preserve-to-ipfs", continuing
+28 silly lifecycle No script for "version" in "@truffle/preserve-to-buckets", continuing
+29 silly lifecycle No script for "version" in "@truffle/preserve-fs", continuing
+30 silly lifecycle No script for "version" in "@truffle/preserve-to-ipfs", continuing
+31 silly lifecycle No script for "preversion" in "@truffle/preserve-to-filecoin", continuing
+32 silly lifecycle No script for "version" in "@truffle/preserve-to-filecoin", continuing
+33 silly lifecycle No script for "version" in "root", continuing
+34 silly gitAdd [
+34 silly gitAdd   'packages/preserve/package.json',
+34 silly gitAdd   'packages/preserve-to-buckets/package.json',
+34 silly gitAdd   'packages/preserve-fs/package.json',
+34 silly gitAdd   'packages/preserve-to-ipfs/package.json',
+34 silly gitAdd   'packages/preserve-to-filecoin/package.json',
+34 silly gitAdd   'packages/preserve-to-filecoin/package-lock.json'
+34 silly gitAdd ]
+35 error Error: Command failed with exit code 1: git add -- packages/preserve/package.json packages/preserve-to-buckets/package.json packages/preserve-fs/package.json packages/preserve-to-ipfs/package.json packages/preserve-to-filecoin/package.json packages/preserve-to-filecoin/package-lock.json
+35 error The following paths are ignored by one of your .gitignore files:
+35 error packages/preserve-to-filecoin/package-lock.json
+35 error hint: Use -f if you really want to add them.
+35 error hint: Turn this message off by running
+35 error hint: "git config advice.addIgnoredFile false"
+35 error     at makeError (/Users/fainashalts/preserves/preserves/node_modules/execa/lib/error.js:60:11)
+35 error     at handlePromise (/Users/fainashalts/preserves/preserves/node_modules/execa/index.js:118:26)
+35 error     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+35 error     at async Promise.all (index 0)

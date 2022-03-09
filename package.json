@@ -2,15 +2,35 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "@ganache/filecoin": "0.1.2",
+    "@truffle/error": "^0.1.0",
+    "@truffle/preserve-to-ipfs": "file:packages/preserve-to-ipfs",
+    "@trufflesuite/typedoc-default-themes": "^0.6.1",
+    "@types/fs-extra": "^9.0.1",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "@types/tmp": "^0.2.3",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
+    "cids": "^1.1.5",
     "eslint": "^8.9.0",
+    "fs-extra": "^9.0.1",
+    "ganache": "3.0.0-filecoin.3",
     "husky": ">=6",
+    "ipfs": "^0.53.2",
+    "ipfsd-ctl": "^7.2.0",
+    "iter-tools": "^7.0.2",
+    "jest": "^26.0.1",
     "lerna": "^4.0.0",
     "lerna-update-wizard": "^1.1.0",
     "lint-staged": ">=10",
     "prettier": "^2.5.1",
-    "prs-merged-since": "^1.1.0"
+    "prs-merged-since": "^1.1.0",
+    "semver": "^7.3.4",
+    "tmp-promise": "^3.0.2",
+    "ts-jest": "^26.1.0",
+    "typedoc": "^0.20.34",
+    "typescript": "4.2.4"
   },
   "scripts": {
     "bootstrap": "npx lerna bootstrap",
@@ -30,5 +50,11 @@
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,ts,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@truffle/preserve": "file:packages/preserve",
+    "@truffle/preserve-fs": "file:packages/preserve-fs",
+    "@truffle/preserve-to-buckets": "file:packages/preserve-to-buckets",
+    "@truffle/preserve-to-filecoin": "file:packages/preserve-to-filecoin"
   }
 }
