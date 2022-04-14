@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@truffle/preserve": "^0.2.7",
-    "@trufflesuite/filecoin.js": "^0.0.3",
+    "@trufflesuite/filecoin.js": "^0.0.4",
     "cids": "^1.1.5",
     "delay": "^5.0.0"
   }

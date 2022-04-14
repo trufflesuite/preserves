@@ -2188,10 +2188,10 @@
   resolved "https://registry.yarnpkg.com/@truffle/error/-/error-0.1.0.tgz#5e9fed79e6cda624c926d314b280a576f8b22a36"
   integrity sha512-RbUfp5VreNhsa2Q4YbBjz18rOQI909pG32bghl1hulO7IpvcqTS+C3Ge5cNbiWQ1WGzy1wIeKLW0tmQtHFB7qg==
 
-"@trufflesuite/filecoin.js@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@trufflesuite/filecoin.js/-/filecoin.js-0.0.3.tgz#26db65ddb9f721377adc5c8acedcd6d6c0b39179"
-  integrity sha512-17kNIJvoKPcRB2zGiAF+ZvYJsvFzDgrl/cJ5+5NbPssWgrebg+zk53lFCjjgJVp2itvJm3p4R0f0udV7MTp9ZQ==
+"@trufflesuite/filecoin.js@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@trufflesuite/filecoin.js/-/filecoin.js-0.0.4.tgz#acf3a29379e456ff0c0f4f0c90b4336b99647248"
+  integrity sha512-LYk6Pc2uujLrPgtXSqL6kh/dZsfw8Q4/h5EHfGczj9BuxLyDezAmPFs1lMq4DdA18OgYVXDbqSOCwDww7oGHsw==
   dependencies:
     "@ledgerhq/hw-transport-webusb" "^5.22.0"
     "@nodefactory/filsnap-adapter" "^0.2.1"
@@ -2506,7 +2506,7 @@
   version "0.2.0"
   resolved "https://codeload.github.com/trufflesuite/filecoin-signing-tools-js/tar.gz/2786fdb8a2b71bd1c7789c0701da41bb644a098f"
   dependencies:
-    axios "0.26.1"
+    axios "^0.20.0"
     base32-decode "^1.0.0"
     base32-encode "^1.1.1"
     bip32 "^2.0.5"
